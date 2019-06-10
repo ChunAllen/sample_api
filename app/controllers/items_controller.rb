@@ -6,9 +6,7 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
-    @user = User.find(params[:user_id])
-
-    render json: { data: @items, user_mobile: @user.mobile_number, status: 200 }
+    render json: { data: @items, status: 200 }
   end
 
   # GET /items/1
